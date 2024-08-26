@@ -1,0 +1,6 @@
+select fr.rfam_acc, fr.rfamseq_acc, fr.seq_start, fr.seq_end
+from full_region fr, rfamseq fr, taxonomy tx,
+where tf.ncbi_id = tx.ncbi_id
+and fr.rfamseq_acc = rf.rfamseq_acc
+and tx.ncbi_id = 10116
+and is_significant = 1;
